@@ -1,0 +1,42 @@
+{
+  "name": "@ariastel/nodebb-plugin-category-combiner",
+  "version": "0.0.1",
+  "description": "NodeBB Plugin that allows users to tweak signature display config",
+  "main": "./plugin/index.js",
+  "repository": "git://github.com/ariastel/nodebb-plugin-category-combiner.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "nodebb",
+    "plugin"
+  ],
+  "homepage": "https://github.com/ariastel/nodebb-plugin-category-combiner#readme",
+  "bugs": {
+    "url": "https://github.com/ariastel/nodebb-plugin-category-combiner/issues"
+  },
+  "author": {
+    "name": "Antosik",
+    "email": "grig_anton96@mail.ru"
+  },
+  "contributors": [
+    "Ariastel Team <ariastel@iamantosik.me> (https://github.com/ariastel)"
+  ],
+  "license": "MIT",
+  "nbbpm": {
+    "compatibility": "^1.16.x"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

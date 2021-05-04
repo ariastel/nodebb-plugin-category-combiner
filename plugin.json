@@ -1,0 +1,34 @@
+{
+	"id": "nodebb-plugin-category-combiner",
+	"name": "NodeBB News posts plugin",
+	"description": "NodeBB that allow to mark posts as news",
+	"url": "https://github.com/ariastel/nodebb-plugin-category-combiner",
+	"library": "./plugin/index.js",
+	"hooks": [
+		{
+			"hook": "static:app.load",
+			"method": "hooks.statics.load"
+		},
+		{
+			"hook": "filter:admin.header.build",
+			"method": "hooks.filters.addMenuItem"
+		},
+		{
+			"hook": "filter:categories.buildTopicsSortedSet",
+			"method": "hooks.filters.buildTopicsSortedSet"
+		},
+		{
+			"hook": "filter:categories.getTopicIds",
+			"method": "hooks.filters.getTopicIds"
+		},
+		{
+			"hook": "filter:categories.getTopicCount",
+			"method": "hooks.filters.getTopicCount"
+		},
+		{
+			"hook": "filter:categories.getPinnedTids",
+			"method": "hooks.filters.getPinnedTids"
+
+		}
+	]
+}

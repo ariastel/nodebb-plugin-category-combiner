@@ -34,14 +34,4 @@ async function getChildrenCategorySet(parentCid, setFormat) {
   return childCids.map((cid) => setFormat.replace('{0}', cid));
 }
 
-/**
- * @param {number} parentCid
- * @returns {string[]}
- */
-async function getChildrenCategoryPinnedSet(parentCid) {
-  const childCids = await categories.getChildrenCids(parentCid);
-  const childCidPinnedSet = childCids.map((cid) => `cid:${cid}:tids:pinned`);
-  return [`cid:${parentCid}:tids:pinned`, ...childCidPinnedSet];
-}
-
-module.exports = { getCategorySetFormat, getChildrenCategorySet, getChildrenCategoryPinnedSet };
+module.exports = { getCategorySetFormat, getChildrenCategorySet };

@@ -24,11 +24,6 @@
 		{
 			"hook": "filter:categories.getTopicCount",
 			"method": "hooks.filters.getTopicCount"
-		},
-		{
-			"hook": "filter:categories.getPinnedTids",
-			"method": "hooks.filters.getPinnedTids"
-
 		}
 	]
 }

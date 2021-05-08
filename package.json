@@ -5,7 +5,7 @@
   "main": "./plugin/index.js",
   "repository": "git://github.com/ariastel/nodebb-plugin-category-combiner.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "lint": "eslint ."
   },
   "keywords": [
@@ -32,7 +32,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^7.24.0",
+    "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"
   },

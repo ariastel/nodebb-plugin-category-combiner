@@ -1,8 +1,6 @@
 const constants = require('./constants');
-const {
-  _, categories, db, topics,
-} = require('./nodebb');
-const { getCategorySetFormat, getChildrenCategorySet, getChildrenCategoryPinnedSet } = require('./utils');
+const { _, categories, db } = require('./nodebb');
+const { getCategorySetFormat, getChildrenCategorySet } = require('./utils');
 
 
 const Filters = {};
@@ -74,24 +72,6 @@ Filters.getTopicCount = async function getTopicCount({ topicCount, data }) {
   }
 
   return { topicCount };
-};
-
-Filters.getPinnedTids = async function getPinnedTids({ pinnedTids, data }) {
-
-  const childPinnedCidSet = await getChildrenCategoryPinnedSet(data.cid);
-  if (!childPinnedCidSet.length) {
-    return { pinnedTids };
-  }
-
-  const result = await db.getSortedSetRevUnion({
-    sets: childPinnedCidSet, start: data.start, stop: data.stop,
-  });
-  if (!result.length) {
-    return { pinnedTids };
-  }
-
-  const notExpiredPinnedTids = await topics.tools.checkPinExpiry(result);
-  return { pinnedTids: notExpiredPinnedTids };
 };
 
 module.exports = Filters;

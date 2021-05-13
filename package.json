@@ -1,6 +1,6 @@
 {
   "name": "@ariastel/nodebb-plugin-category-combiner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NodeBB Plugin that allows users to tweak signature display config",
   "main": "./plugin/index.js",
   "repository": "git://github.com/ariastel/nodebb-plugin-category-combiner.git",

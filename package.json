@@ -1,6 +1,6 @@
 {
   "name": "@ariastel/nodebb-plugin-category-combiner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This plugin displays descendants categories topics in the parent category",
   "main": "./plugin/index.js",
   "repository": "git://github.com/ariastel/nodebb-plugin-category-combiner.git",

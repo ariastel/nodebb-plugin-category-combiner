@@ -1,17 +1,13 @@
 {
 	"id": "nodebb-plugin-category-combiner",
-	"name": "NodeBB News posts plugin",
-	"description": "NodeBB that allow to mark posts as news",
+	"name": "NodeBB Category Combiner plugin",
+	"description": "This plugin displays descendants categories topics in the parent category",
 	"url": "https://github.com/ariastel/nodebb-plugin-category-combiner",
 	"library": "./plugin/index.js",
 	"hooks": [
 		{
 			"hook": "static:app.load",
 			"method": "hooks.statics.load"
-		},
-		{
-			"hook": "filter:admin.header.build",
-			"method": "hooks.filters.addMenuItem"
 		},
 		{
 			"hook": "filter:categories.buildTopicsSortedSet",
